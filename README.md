@@ -1,4 +1,4 @@
-# landing-page
+# Landing Page
 - [Live Demo](https://i4pg.github.io/landing-page/)
 
 ## Description
