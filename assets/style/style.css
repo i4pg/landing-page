@@ -1,0 +1,269 @@
+/* Import Roboto font from Google fonts */
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* CSS Variables */
+
+:root {
+  --bg-dark: #1F2937;
+  --hero-main-size: 48px;
+  --hero-main-weight: bolder;
+  --hero-main-color: #F9FAF8;
+  --hero-secondary-size: 18xp;
+  --hero-secondary-color: #E5E7EB;
+  --nav-logo-size: 24px;
+  --nav-logo-color: var(--hero-main-color);
+  --nav-link-size: var(--hero-secondary-size);
+  --nav-link-color: var(--hero-secondary-color);
+  --btn: #3882F6;
+  --call-to-action-bg: var(--btn);
+  --info-heading-size: 36px;
+  --info-heading-weight: bolder;
+  --info-heading-color: var(--bg-dark);
+  --quote-bg: var(--hero-secondary-color);
+  --quote-size: 36px;
+  --quote-weight: lighter;
+  --quote-style: italic;
+  --quote-color: var(--bg-dark);
+  --padding: 64px 0 128px 0;
+  --secondary-padding: 64px 0 64px 0;
+}
+
+/* Use the alternative box model */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Reset */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Page container */
+
+.container {
+  width: 74%;
+  margin: 0 auto;
+}
+
+/* Header */
+
+header {
+  background: var(--bg-dark);
+}
+
+/* nav */
+
+nav {
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav h2 {
+  color: var(--nav-logo-color);
+}
+
+nav ul {
+ display: flex;
+}
+
+nav li {
+  margin: 0 8px;
+}
+
+nav a {
+  font-size: var(--nav-link-size);
+  color: var(--nav-link-color);
+}
+
+h2 {
+  margin: 0;
+}
+
+/* Hero */
+
+.hero {
+  padding: var(--padding);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-content {
+  width: 50%;
+}
+
+.hero .hero-image {
+  background: slategray;
+  width: 50%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-image p {
+  color: var(--nav-link-color);
+}
+
+.hero-content h2 {
+  font-size: var(--hero-main-size);
+  font-weight: var(--hero-main-weight);
+  color: var(--hero-main-color);
+}
+
+.hero-content p {
+  font-size: var(--hero-secondary-size);
+  color: var(--hero-secondary-color);
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.hero-content button {
+  font-weight: bold;
+  padding: 8px 28px;
+  background: var(--btn);
+  color: var(--hero-main-color);
+  border: none;
+  border-radius: 8px;
+}
+
+/* Info Section */
+
+.info {
+  padding: var(--padding);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info h2 {
+  color: var(--info-heading-color);
+  font-size: var(--info-heading-size);
+  font-weight: var(--info-heading-weight);
+}
+
+.info .illustration {
+  width: 100%;
+  padding-top: 32px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.info .illustration div {
+  width: 150px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.info .illustration div .info-img  {
+  width: 100%;
+  height: 150px;
+  border: 4px solid var(--btn);
+  border-radius: 16px;
+}
+
+.info .illustration div  p {
+  color: var(--quote-color);
+  margin: 8px 0;
+}
+
+/* Quote */
+
+.quote-container {
+  background: var(--quote-bg);
+}
+
+.quote {
+  padding: var(--secondary-padding);
+}
+
+.quote blockquote {
+  margin-bottom: 0;
+  color: var(--quote-color);
+  font-size: var(--quote-size);
+  font-style: var(--quote-style);
+  font-weight: var(--quote-weight);
+}
+
+.quote p {
+  width: 95%;
+  text-align: right;
+  font-weight: var(--info-heading-weight);
+  margin: 0;
+}
+
+/* Call to action */
+
+.call {
+  padding: var(--secondary-padding);
+}
+
+.call .blue-banner {
+  width: 100%;
+  padding: 36px 72px;
+  background: var(--btn);
+  color: var(--nav-link-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.call .blue-banner h3 {
+  margin: 0;
+  font-weight: var(--info-heading-weight);
+}
+
+.call .blue-banner p {
+  margin: 0;
+}
+
+.call .blue-banner button {
+  background: var(--call-to-action-bg);
+  color: var(--nav-link-color);
+  padding: 6px 32px;
+  border: solid var(--nav-link-color) 2px;
+  border-radius: 8px;
+}
+
+/* Footer */
+
+footer {
+  padding: 12px 0;
+  background: var(--bg-dark);
+}
+
+footer > div.container {
+  color: var(--nav-link-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
